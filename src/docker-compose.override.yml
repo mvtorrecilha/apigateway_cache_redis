@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+
+  redisdata:
+    ports:
+      - "6379:6379"
+    volumes:
+      - micro-redisdata:/data
+
+  library.basket.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT= 6001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=pa55w0rd
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/webApi.pfx
+      - ConnectionStrings__Redis=redisdata
+    ports:
+      - 6000:80
+      - 6001:443
+    depends_on:
+      - redisdata
+    volumes:
+      - ~/.aspnet/https:/https:ro
+
+  library.book.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT= 4001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=pa55w0rd
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/webApi.pfx
+    ports:
+      - "4000:80"
+      - "4001:443"
+    volumes:
+      - ~/.aspnet/https:/https:ro
+
+  library.student.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT= 3001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=pa55w0rd
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/webApi.pfx
+    ports:
+      - "3000:80"
+      - "3001:443"
+    volumes:
+      - ~/.aspnet/https:/https:ro
+
+  library.apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT= 5101
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=pa55w0rd
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/webApi.pfx
+    ports:
+      - 5100:80
+      - 5101:443
+    volumes:
+      - ./ApiGateways\Web.Bff\ApiGateway:/app/configuration
+      - ~/.aspnet/https:/https:ro
+
+volumes:
+  micro-redisdata:
+    external: false

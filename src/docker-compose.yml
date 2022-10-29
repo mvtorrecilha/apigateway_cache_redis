@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+ 
+  redisdata:
+    container_name: redis-data
+    image: redis:alpine
+
+  library.basket.api:
+    image: ${DOCKER_REGISTRY-}librarybasketapi
+    build:
+      context: .
+      dockerfile: Services/Basket/Library.Basket.API/Dockerfile
+
+  library.book.api:
+    image: ${DOCKER_REGISTRY-}librarybookapi
+    build:
+      context: .
+      dockerfile: Services/Book/Library.Book.API/Dockerfile
+
+
+  library.student.api:
+    image: ${DOCKER_REGISTRY-}librarystudentapi
+    build:
+      context: .
+      dockerfile: Services/Student/Library.Student.API/Dockerfile
+
+
+  library.apigateway:
+    image: ${DOCKER_REGISTRY-}libraryapigateway
+    build:
+      context: .
+      dockerfile: ApiGateways/Base/Library.ApiGateway/Dockerfile
+

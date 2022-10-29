@@ -3,11 +3,23 @@
 A small simple api gateway with cache redis .net core
 
 ![](img/apigateway_redis_architecture.png)
-## Technologies:
+## Implemented:
 
 - ASP.NET Core 6.0
-- Gateway pattern
+- Gateway pattern (Ocelot)
 - Swagger
+- Redis Cache
+- Docker Compose
+
+## Docker Compose Usage
+
+```
+docker-compose build
+```
+
+```
+docker-compose up
+```
 
 ## Features available for access:
 - Books:

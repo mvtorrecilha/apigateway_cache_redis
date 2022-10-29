@@ -37,9 +37,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{B8EDEDC9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{17BC4EF7-2B3E-4AC6-842A-0DAB747BD0B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Infra.Redis", "Infra\Library.Infra.Redis\Library.Infra.Redis.csproj", "{57FBFEF2-CA44-40A6-ABA4-2B47C62A69AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.Infra.Redis", "Infra\Library.Infra.Redis\Library.Infra.Redis.csproj", "{57FBFEF2-CA44-40A6-ABA4-2B47C62A69AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Basket.API", "Services\Basket\Library.Basket.API\Library.Basket.API.csproj", "{52AEDE65-16BD-47EF-AFB6-4012B8FB4D41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.Basket.API", "Services\Basket\Library.Basket.API\Library.Basket.API.csproj", "{52AEDE65-16BD-47EF-AFB6-4012B8FB4D41}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D1F1303E-8063-4816-9082-750D791E8697}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,10 @@ Global
 		{52AEDE65-16BD-47EF-AFB6-4012B8FB4D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52AEDE65-16BD-47EF-AFB6-4012B8FB4D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52AEDE65-16BD-47EF-AFB6-4012B8FB4D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1F1303E-8063-4816-9082-750D791E8697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1F1303E-8063-4816-9082-750D791E8697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1F1303E-8063-4816-9082-750D791E8697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1F1303E-8063-4816-9082-750D791E8697}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -46,6 +46,6 @@ docker-compose up
         ```
     - Get Basket By Student Id
         - Url: https://localhost:6001/api/v1/basket/student/{studentId}
-        - Url from gateway: https://localhost:5101/basket-api/v1/basket/student/{stuentId}
+        - Url from gateway: https://localhost:5101/basket-api/v1/basket/student/{studentId}
 
 Note: You can download the postman file configuration to import. The file is located in the Postman files folder

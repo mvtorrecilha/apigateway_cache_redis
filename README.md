@@ -20,4 +20,20 @@ A small simple api gateway with cache redis .net core
         - Url: https://localhost:3001/api/v1/students
         - Url from gateway: https://localhost:5101/student-api/v1/students
 
+- Basket:
+    - Add Basket
+        - Url: https://localhost:6001/api/v1/basket
+        - Url from gateway: https://localhost:5101/basket-api/v1/basket
+
+        - Example Body:
+        ```
+        {
+            "bookId": "1673a9fd-191a-479c-a41f-3dc5611aa98e",
+            "studentId": "3673a9fd-191a-479c-a41f-3dc5611aa77d"
+        }
+        ```
+    - Get Basket By Student Id
+        - Url: https://localhost:6001/api/v1/basket/student/{studentId}
+        - Url from gateway: https://localhost:5101/basket-api/v1/basket/student/{stuentId}
+
 Note: You can download the postman file configuration to import. The file is located in the Postman files folder

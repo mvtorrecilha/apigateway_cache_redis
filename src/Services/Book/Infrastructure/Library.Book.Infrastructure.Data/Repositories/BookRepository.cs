@@ -15,7 +15,7 @@ public class BookRepository : IBookRepository
         {
             new BookItem
             {
-                Id = new Guid(),
+                Id = Guid.Parse("1673a9fd-191a-479c-a41f-3dc5611aa98e"),
                 Author = "Author1",
                 Pages = 0,
                 Publisher = "",
@@ -23,7 +23,7 @@ public class BookRepository : IBookRepository
             },
             new BookItem
             {
-                Id = new Guid(),
+                Id = Guid.Parse("2673a9fd-191a-479c-a41f-3dc5611aa98e"),
                 Author = "Author2",
                 Pages = 0,
                 Publisher = "",

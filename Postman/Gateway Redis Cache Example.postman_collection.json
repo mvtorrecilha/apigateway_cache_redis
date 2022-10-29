@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "7a53b659-9f86-445c-9921-56f11160219f",
+		"name": "Gateway Redis Cache Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Gateway",
+			"item": [
+				{
+					"name": "Get All Books - API gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5101/book-api/v1/books",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5101",
+							"path": [
+								"book-api",
+								"v1",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Students - API gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5101/student-api/v1/students",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5101",
+							"path": [
+								"student-api",
+								"v1",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Basket - API gateway",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": \"1673a9fd-191a-479c-a41f-3dc5611aa98e\",\r\n    \"studentId\": \"3673a9fd-191a-479c-a41f-3dc5611aa77d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5101/basket-api/v1/basket",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5101",
+							"path": [
+								"basket-api",
+								"v1",
+								"basket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Basket - API gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5101/basket-api/v1/basket/student/3673a9fd-191a-479c-a41f-3dc5611aa77d",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5101",
+							"path": [
+								"basket-api",
+								"v1",
+								"basket",
+								"student",
+								"3673a9fd-191a-479c-a41f-3dc5611aa77d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Get All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:4001/api/v1/books",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"api",
+								"v1",
+								"books"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Get All Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:3001/api/v1/students",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"students"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Basket",
+			"item": [
+				{
+					"name": "Get Basket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:6001/api/v1/basket/student/3673a9fd-191a-479c-a41f-3dc5611aa77d",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "6001",
+							"path": [
+								"api",
+								"v1",
+								"basket",
+								"student",
+								"3673a9fd-191a-479c-a41f-3dc5611aa77d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Basket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": \"1673a9fd-191a-479c-a41f-3dc5611aa98e\",\r\n    \"studentId\": \"3673a9fd-191a-479c-a41f-3dc5611aa77d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:6001/api/v1/basket",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "6001",
+							"path": [
+								"api",
+								"v1",
+								"basket"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

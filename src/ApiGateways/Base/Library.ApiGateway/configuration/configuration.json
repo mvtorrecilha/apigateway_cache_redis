@@ -1,6 +1,30 @@
 {
   "Routes": [
     {
+      "DownstreamPathTemplate": "/api/{version}/basket",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6001
+        }
+      ],
+      "UpstreamPathTemplate": "/basket-api/{version}/basket",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{version}/basket/student/{studentId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6001
+        }
+      ],
+      "UpstreamPathTemplate": "/basket-api/{version}/basket/student/{studentId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
       "DownstreamPathTemplate": "/api/{version}/books",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -12,7 +36,6 @@
       "UpstreamPathTemplate": "/book-api/{version}/books",
       "UpstreamHttpMethod": [ "GET" ]
     },
-   
     {
       "DownstreamPathTemplate": "/api/{version}/students",
       "DownstreamScheme": "https",
